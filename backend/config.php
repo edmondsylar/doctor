@@ -90,6 +90,16 @@
       return $results;
     }
 
+    function search($keyword){
+      $q = "(SELECT *, 'drugs' as drug from drugs WHERE title LIKE '%$keyword' OR description LIKE '%$keyword') UNION (SELECT *, 'drugs' as Service from drugs WHERE title LIKE '%$keyword' OR description LIKE '%$keyword')";
+
+      $exec = mysqli_query($this->conn, $q);
+      $results = mysqli_fetch_assoc($exec);
+      echo "String ".gettype($results);
+
+      $_SESSION['results'] = $results;
+      header("Location: ../results.php");
+    }
 
   }
 

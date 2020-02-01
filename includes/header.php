@@ -25,7 +25,7 @@
       <?php endif; ?>
 
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <form class="form-inline my-2 my-lg-0" method="post" action="backend/search.php">
       <input class="form-control mr-sm-2" type="search" placeholder="Search Drug" aria-label="Logout">
       <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button> &nbsp;&nbsp;
       <?php if (!isset($_SESSION['loggedin'])): ?>
