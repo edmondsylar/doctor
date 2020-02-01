@@ -9,8 +9,8 @@
     function __construct()
     {
       define('DB_SERVER', 'localhost');
-      define('DB_USERNAME', 'root');
-      define('DB_PASSWORD', '');
+      define('DB_USERNAME', 'dev');
+      define('DB_PASSWORD', 'password');
       define('DB_NAME', 'doctor');
 
       $this->conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
