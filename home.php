@@ -9,10 +9,14 @@
   <h3>Drugs</h3>
   <?php if (!empty($drugs)): ?>
     <?php foreach ($drugs as $drug): ?>
+      <?php
+        $image = base64_encode($drug['image']);
+        // echo $image;
+       ?>
       <div class="card mb-3" style="max-width: 45%;">
          <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="..." class="card-img" alt="...">
+            <img style="width: 100%; height: 100%" src="data:image/jpg;charset=utf8;base64,<?php echo $image; ?>" class="card-img" alt="...">
           </div>
           <div class="col-md-8">
             <div class="card-body">
